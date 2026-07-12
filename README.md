@@ -1,314 +1,561 @@
 <div align="center">
 
-  <!-- Logo / Hero -->
-  <img src="https://img.shields.io/badge/GrowEasy-CRM-orange?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHJ4PSI4IiBmaWxsPSIjZjQ3MzIwIi8+PHRleHQgeD0iMjAiIHk9IjI4IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RzwvdGV4dD48L3N2Zz4=" alt="GrowEasy" />
-  
-  <h1 align="center" style="font-size: 2.5rem; font-weight: 800; margin-top: 0.5rem;">
-    🤖 AI-Powered CSV Importer
-  </h1>
-  
-  <p align="center" style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">
-    Intelligently transform any CSV file into structured CRM records using 
-    <strong>Google Gemini AI</strong> — no matter the column names, layout, or source.
-  </p>
+<img src="https://img.shields.io/badge/GrowEasy-CRM-orange?style=for-the-badge" alt="GrowEasy CRM"/>
 
-  <!-- Badges Row -->
-  <p align="center" style="margin-top: 1.5rem;">
-    <img src="https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js" alt="Next.js 16" />
-    <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react" alt="React 19" />
-    <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript" alt="TypeScript 5" />
-    <img src="https://img.shields.io/badge/Express-4-000000?style=flat-square&logo=express" alt="Express 4" />
-    <img src="https://img.shields.io/badge/Gemini_AI-8E75B2?style=flat-square&logo=googlebard" alt="Gemini AI" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss" alt="Tailwind CSS 4" />
-    <br/>
-    <img src="https://img.shields.io/badge/status-production_ready-22c55e?style=flat-square" alt="Production Ready" />
-    <img src="https://img.shields.io/badge/tests-pending-yellow?style=flat-square" alt="Tests" />
-    <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="License" />
-  </p>
+# 🤖 AI-Powered CSV Importer
 
-  <hr style="width: 60%; margin: 2rem auto; border: none; border-top: 1px solid #e5e7eb;" />
+### Transform Any CSV into Structured CRM Records using Google Gemini AI
 
-  <!-- Quick Links -->
-  <p align="center">
-    <a href="#-features"><strong>Features</strong></a> •
-    <a href="#-architecture"><strong>Architecture</strong></a> •
-    <a href="#-quick-start"><strong>Quick Start</strong></a> •
-    <a href="#-api-reference"><strong>API</strong></a> •
-    <a href="#-deployment"><strong>Deploy</strong></a> •
-    <a href="#-tech-stack"><strong>Tech Stack</strong></a>
-  </p>
+An intelligent CSV Import System built for the **GrowEasy Software Developer Assignment**.
+
+Instead of relying on fixed column names, this application uses **Google Gemini AI** to understand CSV data from **any source**, automatically mapping it into standardized CRM records.
+
+---
+
+### 🌐 Live Demo
+
+| Service | URL |
+|---------|-----|
+| 🚀 Frontend | https://grow-easy-csv-virid.vercel.app |
+| ⚙️ Backend API | https://groweasy-backend-cr5t.onrender.com |
+| ❤️ Health Check | https://groweasy-backend-cr5t.onrender.com/api/health |
+
+---
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js"/>
+
+<img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react"/>
+
+<img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript"/>
+
+<img src="https://img.shields.io/badge/Express.js-4-000000?style=flat-square&logo=express"/>
+
+<img src="https://img.shields.io/badge/Google-Gemini-blue?style=flat-square&logo=google"/>
+
+<img src="https://img.shields.io/badge/TailwindCSS-v4-38BDF8?style=flat-square&logo=tailwind-css"/>
+
+<img src="https://img.shields.io/badge/Deployment-Vercel-black?style=flat-square&logo=vercel"/>
+
+<img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=flat-square&logo=render"/>
+
+<img src="https://img.shields.io/badge/License-MIT-success?style=flat-square"/>
+
+</p>
+
+---
+
+### 📌 Quick Links
+
+[✨ Features](#-features) •
+[🏗 Architecture](#-architecture) •
+[📂 Project Structure](#-project-structure) •
+[🚀 Quick Start](#-quick-start) •
+[📖 API](#-api-reference) •
+[🌐 Deployment](#-deployment) •
+[🛠 Tech Stack](#-tech-stack)
+
 </div>
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="33%">
-        <h3>📤 Smart Upload</h3>
-        <p>Drag & drop or file picker. <br/>Supports any CSV format from any source.</p>
-      </td>
-      <td align="center" width="33%">
-        <h3>🧠 AI Extraction</h3>
-        <p>Google Gemini maps any column layout → <br/>15 standardized CRM fields.</p>
-      </td>
-      <td align="center" width="33%">
-        <h3>📊 Rich Dashboard</h3>
-        <p>Summary cards, searchable table, <br/>colored status pills, dynamic columns.</p>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <h3>🌙 Dark Mode</h3>
-        <p>System-aware theme with <br/>manual toggle support.</p>
-      </td>
-      <td align="center">
-        <h3>⚡ Batch Processing</h3>
-        <p>Parallel AI requests with configurable <br/>concurrency & automatic retries.</p>
-      </td>
-      <td align="center">
-        <h3>🔒 Production Ready</h3>
-        <p>Rate limiting, configurable CORS, <br/>trust proxy, and mock fallback mode.</p>
-      </td>
-    </tr>
-  </table>
-</div>
+## 📤 Smart CSV Upload
+
+- Drag & Drop Upload
+- Traditional File Picker
+- Supports CSV files from any source
+- No predefined format required
 
 ---
 
-## 🏗️ Architecture
+## 🧠 AI-Powered Data Extraction
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                        Browser                              │
-│  ┌───────────────────────────────────────────────────────┐  │
-│  │              Next.js 16 App (React 19)                 │  │
-│  │                                                        │  │
-│  │  ┌──────────┐  ┌──────────┐  ┌────────────────────┐   │  │
-│  │  │ DropZone │  │ Upload   │  │ Import Result      │   │  │
-│  │  │ + Modal  │  │ Progress │  │ Table + Summary    │   │  │
-│  │  └────┬─────┘  └──────────┘  └────────┬───────────┘   │  │
-│  │       │                                │               │  │
-│  │  ┌────▼────────────────────────────────▼───────────┐   │  │
-│  │  │           PapaParse (CSV → JSON)                 │   │  │
-│  │  └────────────────────┬────────────────────────────┘   │  │
-│  └───────────────────────┼────────────────────────────────┘  │
-└──────────────────────────┼───────────────────────────────────┘
-                           │  POST /api/import
-                           ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    Express.js Backend                        │
-│                                                              │
-│  ┌────────────┐  ┌──────────────┐  ┌────────────────────┐   │
-│  │  Rate      │  │  Validation  │  │  AI Service         │   │
-│  │  Limiter   │─▶│  Middleware  │─▶│  (Gemini / Mock)    │   │
-│  └────────────┘  └──────────────┘  └─────────┬──────────┘   │
-│                                              │               │
-│  ┌───────────────────────────────────────────▼───────────┐   │
-│  │              CRM Validator & Cleaner                    │   │
-│  │  (Normalizes fields, validates statuses & sources)     │   │
-│  └──────────────────────┬────────────────────────────────┘   │
-│                         ▼                                    │
-│              Structured JSON Response                        │
-└─────────────────────────────────────────────────────────────┘
+Powered by **Google Gemini AI**
+
+Automatically extracts and standardizes:
+
+- Name
+- Email
+- Phone Number
+- Country Code
+- Company
+- City
+- State
+- Country
+- Lead Owner
+- CRM Status
+- CRM Notes
+- Data Source
+- Possession Time
+- Description
+- Created Date
+
+even when the CSV uses completely different column names.
+
+---
+
+## 📊 Interactive Dashboard
+
+After processing:
+
+- Search Records
+- Summary Cards
+- Dynamic Table
+- Status Badges
+- Pagination
+- Responsive Design
+
+---
+
+## 🌙 Dark Mode
+
+- Automatic System Theme Detection
+- Manual Theme Toggle
+- Fully Responsive
+
+---
+
+## ⚡ High Performance
+
+- Batch Processing
+- Parallel AI Requests
+- Retry Mechanism
+- Request Validation
+- Rate Limiting
+
+---
+
+## 🔒 Production Ready
+
+✔ Express Rate Limiter
+
+✔ Configurable CORS
+
+✔ Environment Variables
+
+✔ Trust Proxy Support
+
+✔ Error Handling Middleware
+
+✔ Mock Mode (Works without Gemini API)
+
+---
+
+# 🏗 Architecture
+
+```text
+                   User
+                    │
+                    ▼
+        Next.js 16 Frontend (React 19)
+                    │
+         Upload CSV / Preview CSV
+                    │
+              PapaParse Parser
+                    │
+                    ▼
+      POST /api/import (Axios Request)
+                    │
+                    ▼
+         Express.js Backend API
+                    │
+     ┌──────────────┼───────────────┐
+     │              │               │
+ Validation    Rate Limiter     Error Handler
+     │              │               │
+     └──────────────┼───────────────┘
+                    │
+                    ▼
+           Google Gemini AI
+                    │
+                    ▼
+        CRM Data Normalization
+                    │
+                    ▼
+        Structured CRM JSON Output
+                    │
+                    ▼
+       Frontend Dashboard Display
 ```
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-```
-📦 groweasy-csv-importer
-├── 🖥️ backend/                          # Express.js API server
-│   ├── 📁 src/
-│   │   ├── 📄 config.ts                 # Centralized env configuration
-│   │   ├── 📄 index.ts                  # Express app entry point
-│   │   ├── 📁 middleware/
-│   │   │   ├── 📄 errorHandler.ts       # Global error handling
-│   │   │   └── 📄 validateBody.ts       # Request validation
-│   │   ├── 📁 prompts/
-│   │   │   ├── 📄 systemPrompt.ts       # Gemini system instruction
-│   │   │   └── 📄 fewShotExamples.ts    # Few-shot training examples
-│   │   ├── 📁 routes/
-│   │   │   ├── 📄 health.ts            # GET /api/health
-│   │   │   └── 📄 import.ts            # POST /api/import
-│   │   ├── 📁 services/
-│   │   │   ├── 📄 aiService.ts         # Gemini integration + mock fallback
-│   │   │   └── 📄 crmValidator.ts      # Field normalization & validation
-│   │   ├── 📁 types/
-│   │   │   ├── 📄 ai.ts                # AI batch types
-│   │   │   ├── 📄 api.ts               # API request/response types
-│   │   │   └── 📄 crm.ts              # Core CRM record types
-│   │   └── 📁 utils/
-│   │       └── 📄 logger.ts            # Console logger utility
-│   ├── 📄 .env.example                  # Environment template
-│   └── 📄 package.json
+```text
+GrowEasy_CSV
 │
-├── 🎨 frontend/                         # Next.js 16 application
-│   ├── 📁 src/
-│   │   ├── 📁 app/                      # Next.js App Router
-│   │   │   ├── 📄 globals.css          # Tailwind imports + dark mode
-│   │   │   ├── 📄 layout.tsx           # Root layout with metadata
-│   │   │   └── 📄 page.tsx            # Main page with all states
-│   │   ├── 📁 components/
-│   │   │   ├── 📁 import/              # Import progress, result table, summary
-│   │   │   ├── 📁 layout/              # Sidebar navigation
-│   │   │   ├── 📁 preview/             # CSV preview table
-│   │   │   ├── 📁 ui/                  # Reusable: Button, Card, Table, Badge, Pagination...
-│   │   │   └── 📁 upload/              # Upload modal, drop zone
-│   │   ├── 📁 hooks/                    # useCsvParser, useImportSubmit, useTheme
-│   │   ├── 📁 services/                # Axios API client
-│   │   └── 📁 types/                   # Frontend type definitions
-│   ├── 📄 .env.example                  # Environment template
-│   └── 📄 package.json
+├── backend
+│   │
+│   ├── src
+│   │   ├── middleware
+│   │   ├── prompts
+│   │   ├── routes
+│   │   ├── services
+│   │   ├── types
+│   │   ├── utils
+│   │   ├── config.ts
+│   │   └── index.ts
+│   │
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── .env.example
 │
-├── 📄 sample.csv                        # Quick-test CSV (8 cols, 2 rows)
-├── 📄 customers-1000.csv                # Large dataset (12 cols, 1000 rows)
-└── 📄 README.md                         # This document
+├── frontend
+│   │
+│   ├── src
+│   │   ├── app
+│   │   ├── components
+│   │   ├── hooks
+│   │   ├── services
+│   │   ├── types
+│   │   └── utils
+│   │
+│   ├── public
+│   ├── package.json
+│   ├── next.config.ts
+│   └── .env.example
+│
+├── sample.csv
+├── customers-1000.csv
+├── README.md
+└── LICENSE
 ```
 
 ---
 
-## 🚀 Quick Start
+# 🚀 Live Deployment
 
-### Prerequisites
+### Frontend
 
-| Tool | Version | Purpose |
-|------|---------|---------|
-| **Node.js** | ≥ 18 | JavaScript runtime |
-| **npm**     | ≥ 9  | Package manager |
+**Vercel**
 
-### 1️⃣ Clone & Install
-
-```bash
-# Clone the repository
-git clone https://github.com/Santosh9192/GrowEasy_CSV
-cd groweasy-csv-importer
-
-# Install backend dependencies
-cd backend && npm install
-
-# Install frontend dependencies
-cd ../frontend && npm install
-cd ..
-```
-
-### 2️⃣ Configure Environment
-
-```bash
-# Backend — copy and edit
-cp backend/.env.example backend/.env
-
-# Frontend — copy (defaults work locally)
-cp frontend/.env.example frontend/.env.local
-```
-
-<details>
-<summary><strong>🔧 Click to see backend configuration options</strong></summary>
-
-| Variable | Required | Default | Description |
-|----------|----------|---------|-------------|
-| `PORT` | ❌ | `4000` | Server port |
-| `GEMINI_API_KEY` | ⚠️ | — | Google Gemini key. **Optional** — mock mode works without it |
-| `CORS_ORIGIN` | ❌ | `*` | Allowed origins (comma-separated for multiple) |
-| `TRUST_PROXY` | ❌ | `false` | Set `true` behind Vercel/Railway/Nginx |
-| `RATE_LIMIT_MAX` | ❌ | `30` | Max import requests per window |
-| `BATCH_SIZE` | ❌ | `20` | Rows per AI batch |
-| `MAX_CONCURRENCY` | ❌ | `3` | Concurrent AI requests |
-| `AI_MODEL` | ❌ | `gemini-2.0-flash` | Gemini model version |
-
-> ⚠️ `GEMINI_API_KEY` is optional — the app includes a **mock processor** that works without it.  
-> Get a free key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
-</details>
-
-### 3️⃣ Start Development Servers
-
-```bash
-# Terminal 1 — Backend (http://localhost:4000)
-cd backend && npm run dev
-
-# Terminal 2 — Frontend (http://localhost:3000)
-cd frontend && npm run dev
-```
-
-### 4️⃣ Walk Through the App
-
-1. Open **[http://localhost:3000](http://localhost:3000)**
-2. Click the orange **"Import CSV"** button in the top bar
-3. Drag `sample.csv` or `customers-1000.csv` onto the dropzone
-4. **Preview** — see all columns parsed with a scrollable table
-5. Click **"Upload File"** (orange button)
-6. **Results** — view summary cards, search leads, colored status pills, and auto-discovered extra columns
+https://grow-easy-csv-virid.vercel.app
 
 ---
 
-## 📖 API Reference
+### Backend
 
-### `GET /api/health`
+**Render**
 
-Quick health check to verify the server is running.
+https://groweasy-backend-cr5t.onrender.com
+
+---
+
+### Health Check
+
+https://groweasy-backend-cr5t.onrender.com/api/health
+
+---
+
+**➡️ Continue with Part 2:** Quick Start, Environment Variables, Installation, and API Reference.
+# 🚀 Quick Start
+
+Follow these steps to run the project locally.
+
+---
+
+## 📋 Prerequisites
+
+Make sure the following software is installed.
+
+| Software | Version |
+|----------|----------|
+| Node.js | 18+ |
+| npm | 9+ |
+| Git | Latest |
+| Google Gemini API Key *(Optional)* | Latest |
+
+> **Note:** The project also supports **Mock Mode**, so a Gemini API key is **not required** for testing.
+
+---
+
+# 📥 Clone Repository
+
+```bash
+git clone https://github.com/Santosh9192/GrowEasy_CSV.git
+
+cd GrowEasy_CSV
+```
+
+---
+
+# 📦 Install Dependencies
+
+## Backend
+
+```bash
+cd backend
+
+npm install
+```
+
+---
+
+## Frontend
+
+```bash
+cd ../frontend
+
+npm install
+```
+
+---
+
+# ⚙ Backend Environment Variables
+
+Create a file
+
+```text
+backend/.env
+```
+
+Example
+
+```env
+PORT=4000
+
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+
+CORS_ORIGIN=http://localhost:3000
+
+TRUST_PROXY=false
+
+RATE_LIMIT_MAX=30
+
+BATCH_SIZE=20
+
+MAX_CONCURRENCY=3
+
+AI_MODEL=gemini-2.0-flash
+```
+
+---
+
+# ⚙ Frontend Environment Variables
+
+Create
+
+```text
+frontend/.env.local
+```
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:4000
+```
+
+For production
+
+```env
+NEXT_PUBLIC_API_URL=https://groweasy-backend-cr5t.onrender.com
+```
+
+---
+
+# ▶ Run Backend
+
+```bash
+cd backend
+
+npm run dev
+```
+
+Server
+
+```
+http://localhost:4000
+```
+
+---
+
+# ▶ Run Frontend
+
+```bash
+cd frontend
+
+npm run dev
+```
+
+Open
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🚀 Using the Application
+
+### Step 1
+
+Open the application.
+
+```
+http://localhost:3000
+```
+
+---
+
+### Step 2
+
+Click
+
+```
+Import CSV
+```
+
+---
+
+### Step 3
+
+Upload any CSV file.
+
+Example files included:
+
+- sample.csv
+- customers-1000.csv
+
+---
+
+### Step 4
+
+Preview your CSV.
+
+The application automatically parses all columns without assuming any fixed structure.
+
+---
+
+### Step 5
+
+Click
+
+```
+Upload File
+```
+
+---
+
+### Step 6
+
+The backend sends batches to Google Gemini AI.
+
+---
+
+### Step 7
+
+The application displays
+
+- CRM Summary
+- Searchable Table
+- CRM Status
+- Lead Counts
+- Failed Records
+- Skipped Records
+- Processing Time
+
+---
+
+# 📖 API Reference
+
+---
+
+## GET /api/health
+
+Health endpoint used to verify that the backend is running.
+
+### URL
+
+```
+GET https://groweasy-backend-cr5t.onrender.com/api/health
+```
+
+### Example Response
 
 ```json
-// Response 200
-{ "status": "ok", "timestamp": "2026-07-12T10:00:00.000Z" }
+{
+  "status": "ok",
+  "timestamp": "2026-07-12T11:42:33.685Z"
+}
 ```
 
-### `POST /api/import`
+---
 
-Submit CSV rows for AI-powered extraction. The backend processes them in parallel batches and returns structured CRM records.
+## POST /api/import
 
-**Request:**
+Processes uploaded CSV rows using Google Gemini AI.
+
+### URL
+
+```
+POST https://groweasy-backend-cr5t.onrender.com/api/import
+```
+
+---
+
+## Request Body
+
 ```json
 {
   "rows": [
     {
       "Name": "John Doe",
       "Email": "john@example.com",
-      "Phone": "+1-555-1234",
-      "Company": "Acme Inc",
-      "City": "New York",
-      "Country": "USA"
+      "Phone": "+91 9876543210",
+      "Company": "GrowEasy",
+      "City": "Pune",
+      "Country": "India"
     }
   ]
 }
 ```
 
-**Response:**
+---
+
+## Successful Response
+
 ```json
 {
   "success": true,
   "data": {
     "processed": [
       {
-        "created_at": "2026-07-12T10:00:00.000Z",
+        "created_at": "2026-07-12T11:00:00.000Z",
         "name": "John Doe",
         "email": "john@example.com",
-        "country_code": "+1",
-        "mobile_without_country_code": "555-1234",
-        "company": "Acme Inc",
-        "city": "New York",
-        "state": "-",
-        "country": "USA",
+        "country_code": "+91",
+        "mobile_without_country_code": "9876543210",
+        "company": "GrowEasy",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "country": "India",
         "lead_owner": "-",
         "crm_status": "GOOD_LEAD_FOLLOW_UP",
         "crm_note": "-",
         "data_source": "-",
         "possession_time": "-",
-        "description": "-",
-        "original_data": { "Name": "John Doe", "Email": "...", "Phone": "+1-555-1234", "Company": "Acme Inc", "City": "New York", "Country": "USA" }
+        "description": "-"
       }
     ],
     "skipped": [],
     "failed": [],
-    "counts": { "total": 1, "processed": 1, "skipped": 0, "failed": 0 },
-    "processingTimeMs": 1234
+    "counts": {
+      "total": 1,
+      "processed": 1,
+      "skipped": 0,
+      "failed": 0
+    },
+    "processingTimeMs": 1200
   }
 }
 ```
 
-**Error Response:**
+---
+
+## Error Response
+
 ```json
 {
   "success": false,
@@ -319,163 +566,695 @@ Submit CSV rows for AI-powered extraction. The backend processes them in paralle
 }
 ```
 
-| HTTP Code | Error Code | Description |
-|-----------|-----------|-------------|
-| `400` | `INVALID_INPUT` | Missing/invalid `rows` array or exceeds 10,000 rows |
-| `429` | `RATE_LIMIT_EXCEEDED` | Too many requests — wait and retry |
-| `500` | `AI_PROCESSING_ERROR` | AI extraction failed after all retries |
-| `500` | `INTERNAL_SERVER_ERROR` | Unexpected server error |
+---
+
+# 📑 HTTP Status Codes
+
+| Status Code | Meaning |
+|------------|---------|
+| 200 | Success |
+| 400 | Invalid Request |
+| 429 | Too Many Requests |
+| 500 | AI Processing Error |
+| 500 | Internal Server Error |
 
 ---
 
-## 🌐 Deployment
+# 🧪 Test the Live Application
 
-### Backend → Railway / Render / Fly.io
+### Frontend
 
-One-click deploy template for Railway:
+https://grow-easy-csv-virid.vercel.app
 
-[![Deploy on Railway](https://img.shields.io/badge/Deploy-Railway-0B0D0E?style=for-the-badge&logo=railway)](https://railway.app/new)
+---
+
+### Backend API
+
+https://groweasy-backend-cr5t.onrender.com
+
+---
+
+### Health Endpoint
+
+https://groweasy-backend-cr5t.onrender.com/api/health
+
+---
+
+**➡️ Continue with Part 3:** Deployment Guide, AI Processing Workflow, CRM Field Mapping, and Production Configuration.
+# 🌐 Deployment
+
+The application is fully deployed and publicly accessible.
+
+---
+
+# 🚀 Live Application
+
+| Service | Platform | URL |
+|---------|----------|-----|
+| Frontend | **Vercel** | https://grow-easy-csv-virid.vercel.app |
+| Backend API | **Render** | https://groweasy-backend-cr5t.onrender.com |
+| Health Endpoint | **Render** | https://groweasy-backend-cr5t.onrender.com/api/health |
+
+---
+
+# 🚀 Backend Deployment (Render)
+
+The Express.js backend is deployed on **Render**.
+
+### Build Command
 
 ```bash
-# Required environment variables:
-CORS_ORIGIN=https://your-frontend.vercel.app
-TRUST_PROXY=true
-GEMINI_API_KEY=your-gemini-key
-
-# Build:  cd backend && npm run build
-# Start:  cd backend && npm start
+npm install && npm run build
 ```
 
-### Frontend → Vercel
+### Start Command
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
-
-| Environment Variable | Value |
-|---------------------|-------|
-| `NEXT_PUBLIC_API_URL` | `https://your-backend.railway.app` |
-
-> **Zero config**: Vercel auto-detects Next.js. Just connect your repo and set the env variable above.
-
-### Production Checklist
-
-- [ ] Set a real `GEMINI_API_KEY` for AI extraction
-- [ ] Configure `CORS_ORIGIN` to your frontend URL only
-- [ ] Enable `TRUST_PROXY=true` behind any reverse proxy
-- [ ] Adjust `RATE_LIMIT_MAX` based on expected traffic
-- [ ] Add authentication middleware for multi-user scenarios
-- [ ] Set up monitoring and error tracking (e.g., Sentry)
-- [ ] Configure proper logging (e.g., Winston, Pino)
+```bash
+npm start
+```
 
 ---
 
-## 🧠 AI Extraction Details
+## Backend Environment Variables
 
-### How It Works
+```env
+PORT=10000
 
-1. **System Prompt** — A carefully engineered instruction set tells Gemini to extract all 15 CRM fields
-2. **Few-Shot Examples** — 4 diverse examples teach the AI common CSV patterns
-3. **Batch Processing** — Rows are split into batches (default 20) and processed concurrently (default 3)
-4. **Retry Logic** — Failed batches retry up to 3 times with exponential backoff
-5. **Fallback Mode** — If no API key is provided, a sophisticated mock processor extracts fields using regex patterns
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 
-### CRM Fields Extracted
+CORS_ORIGIN=https://grow-easy-csv-virid.vercel.app
 
-| # | Field | Description | Extraction Strategy |
-|---|-------|-------------|-------------------|
-| 1 | `created_at` | Lead creation date | Parse any date column → ISO 8601 |
-| 2 | `name` | Full lead name | Concatenate first/last name columns |
-| 3 | `email` | Primary email | First email found; rest go to crm_note |
-| 4 | `country_code` | Phone country code | Extract from phone number or country column |
-| 5 | `mobile_without_country_code` | Mobile number | First phone found; rest go to crm_note |
-| 6 | `company` | Company name | Scan: Company, Organization, Business, Firm |
-| 7 | `city` | City | Scan: City, Town, Location, District |
-| 8 | `state` | State/Region | Scan: State, Province, Region |
-| 9 | `country` | Country | Scan: Country, Nation, Territory |
-| 10 | `lead_owner` | Responsible person | Scan: Lead Owner, Assigned To, Sales Rep |
-| 11 | `crm_status` | Lead status | Infer from notes → colored pill display |
-| 12 | `crm_note` | Notes / remarks | Catch-all for unmapped data |
-| 13 | `data_source` | Source | Scan: Lead Source, Campaign, Channel |
-| 14 | `possession_time` | Property time | Scan: Possession, Move-in, Handover |
-| 15 | `description` | Description | Scan: Description, Comments, Details |
+TRUST_PROXY=true
+
+RATE_LIMIT_MAX=30
+
+BATCH_SIZE=20
+
+MAX_CONCURRENCY=3
+
+AI_MODEL=gemini-2.0-flash
+```
 
 ---
 
-## 🛠️ Tech Stack
+# 🚀 Frontend Deployment (Vercel)
+
+The frontend is deployed using **Vercel**.
+
+### Framework
+
+```
+Next.js
+```
+
+### Root Directory
+
+```
+frontend
+```
+
+---
+
+## Frontend Environment Variables
+
+```env
+NEXT_PUBLIC_API_URL=https://groweasy-backend-cr5t.onrender.com
+```
+
+---
+
+# 🌍 Production URLs
+
+### Frontend
+
+```
+https://grow-easy-csv-virid.vercel.app
+```
+
+---
+
+### Backend
+
+```
+https://groweasy-backend-cr5t.onrender.com
+```
+
+---
+
+### Health Check
+
+```
+https://groweasy-backend-cr5t.onrender.com/api/health
+```
+
+---
+
+# 🧠 AI Processing Workflow
+
+The backend intelligently converts any CSV format into standardized CRM records.
+
+```
+CSV Upload
+      │
+      ▼
+PapaParse
+(CSV → JSON)
+      │
+      ▼
+Request Validation
+      │
+      ▼
+Batch Creation
+      │
+      ▼
+Google Gemini AI
+      │
+      ▼
+Field Normalization
+      │
+      ▼
+CRM Validation
+      │
+      ▼
+Structured JSON Response
+      │
+      ▼
+Dashboard Display
+```
+
+---
+
+# ⚡ Processing Pipeline
+
+### Step 1
+
+CSV is parsed into JSON using **PapaParse**.
+
+---
+
+### Step 2
+
+Rows are divided into configurable batches.
+
+Default
+
+```
+20 Rows / Batch
+```
+
+---
+
+### Step 3
+
+Multiple batches run simultaneously.
+
+Default
+
+```
+3 Concurrent Requests
+```
+
+---
+
+### Step 4
+
+Google Gemini analyzes every row.
+
+It identifies
+
+- Names
+- Emails
+- Phone Numbers
+- Companies
+- Cities
+- Countries
+- CRM Status
+- Notes
+
+without relying on fixed column names.
+
+---
+
+### Step 5
+
+The backend validates every extracted record.
+
+Invalid records are
+
+- Skipped
+- Logged
+- Returned separately
+
+---
+
+### Step 6
+
+A clean CRM response is returned to the frontend.
+
+---
+
+# 🔄 Retry Mechanism
+
+If an AI request fails
+
+```
+Attempt 1
+
+↓
+
+Attempt 2
+
+↓
+
+Attempt 3
+
+↓
+
+Fail Batch
+```
+
+The retry uses exponential backoff to reduce temporary API failures.
+
+---
+
+# 🧾 CRM Fields Extracted
+
+| Field | Description |
+|--------|-------------|
+| created_at | Lead creation date |
+| name | Customer Name |
+| email | Email Address |
+| country_code | Phone Country Code |
+| mobile_without_country_code | Mobile Number |
+| company | Company Name |
+| city | City |
+| state | State |
+| country | Country |
+| lead_owner | Assigned Owner |
+| crm_status | Lead Status |
+| crm_note | Additional Notes |
+| data_source | Lead Source |
+| possession_time | Possession Date |
+| description | Description |
+
+---
+
+# 📊 Supported CRM Status Values
+
+The backend validates CRM status before returning results.
+
+Examples
+
+- GOOD_LEAD
+- GOOD_LEAD_FOLLOW_UP
+- CONTACTED
+- INTERESTED
+- NOT_INTERESTED
+- CALLBACK
+- CLOSED
+- LOST
+
+Invalid values are automatically normalized.
+
+---
+
+# 📥 Supported Data Sources
+
+Examples
+
+- Website
+- Facebook
+- Instagram
+- Referral
+- Google Ads
+- LinkedIn
+- Walk-In
+- WhatsApp
+- Email Campaign
+- Other
+
+---
+
+# 🛡 Security Features
+
+✔ Express Rate Limiter
+
+✔ Request Validation
+
+✔ Error Handling Middleware
+
+✔ Configurable CORS
+
+✔ Trust Proxy Support
+
+✔ Environment Variables
+
+✔ Mock AI Mode
+
+✔ Batch Processing
+
+✔ Retry Mechanism
+
+---
+
+# 📈 Performance Features
+
+- Concurrent AI Requests
+- Optimized Batch Processing
+- CSV Parsing on Client Side
+- Lazy Rendering
+- Dynamic Table Columns
+- Search Filtering
+- Pagination
+- Loading Indicators
+
+---
+
+# 📦 Mock Mode
+
+If no Gemini API key is configured,
+
+the backend automatically switches to **Mock Processing Mode**.
+
+Mock Mode can
+
+- Parse CSV
+- Extract Emails
+- Extract Phone Numbers
+- Generate CRM Records
+
+without making external API calls.
+
+This makes the project easy to test locally.
+
+---
+
+# ✅ Production Checklist
+
+| Task | Status |
+|------|--------|
+| Backend Deployed | ✅ |
+| Frontend Deployed | ✅ |
+| Render Configured | ✅ |
+| Vercel Configured | ✅ |
+| CORS Configured | ✅ |
+| Environment Variables Added | ✅ |
+| API Health Endpoint Working | ✅ |
+| AI Integration Working | ✅ |
+| CSV Upload Working | ✅ |
+| Dashboard Working | ✅ |
+
+---
+
+**➡ Continue with Part 4:** Tech Stack, Assignment Checklist, Future Improvements, License, Repository, and Footer.
+# 🛠 Tech Stack
+
+This project is built using a modern full-stack TypeScript architecture.
+
+| Category | Technology |
+|----------|------------|
+| Frontend Framework | Next.js 16 |
+| UI Library | React 19 |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Backend | Express.js |
+| AI | Google Gemini AI |
+| CSV Parsing | PapaParse |
+| HTTP Client | Axios |
+| Package Manager | npm |
+| Deployment (Frontend) | Vercel |
+| Deployment (Backend) | Render |
+| Runtime | Node.js |
+
+---
+
+# 📦 Dependencies
+
+## Frontend
+
+- Next.js
+- React
+- TypeScript
+- Axios
+- PapaParse
+- Tailwind CSS
+
+---
+
+## Backend
+
+- Express.js
+- Google Generative AI SDK
+- CORS
+- dotenv
+- Express Rate Limit
+
+---
+
+# 📈 Performance Optimizations
+
+✔ CSV Parsing on Client
+
+✔ AI Batch Processing
+
+✔ Concurrent API Calls
+
+✔ Dynamic Table Rendering
+
+✔ Search Functionality
+
+✔ Pagination
+
+✔ Responsive UI
+
+✔ Dark Mode
+
+✔ Retry Mechanism
+
+✔ Request Validation
+
+✔ Error Handling
+
+✔ Rate Limiting
+
+---
+
+# 📸 Screenshots
+
+You can add screenshots here before submission.
+
+---
+
+## 🏠 Home Page
+
+> Add Screenshot
+
+---
+
+## 📂 CSV Upload
+
+> Add Screenshot
+
+---
+
+## 👀 CSV Preview
+
+> Add Screenshot
+
+---
+
+## 🤖 AI Processing
+
+> Add Screenshot
+
+---
+
+## 📊 Dashboard
+
+> Add Screenshot
+
+---
+
+# 🧪 Testing
+
+## Live Frontend
+
+https://grow-easy-csv-virid.vercel.app
+
+---
+
+## Backend API
+
+https://groweasy-backend-cr5t.onrender.com
+
+---
+
+## Health Endpoint
+
+https://groweasy-backend-cr5t.onrender.com/api/health
+
+---
+
+## Sample CSV Files
+
+The repository contains sample datasets.
+
+- sample.csv
+- customers-1000.csv
+
+Simply upload one of these files to test the application.
+
+---
+
+# 📋 Assignment Requirements
+
+| Requirement | Status |
+|-------------|--------|
+| Upload CSV | ✅ |
+| Preview CSV | ✅ |
+| Import Confirmation | ✅ |
+| AI Field Extraction | ✅ |
+| Dynamic CRM Mapping | ✅ |
+| Display Processed Records | ✅ |
+| Search Records | ✅ |
+| Responsive Design | ✅ |
+| Dark Mode | ✅ |
+| Error Handling | ✅ |
+| Retry Mechanism | ✅ |
+| Batch Processing | ✅ |
+| Rate Limiting | ✅ |
+| TypeScript | ✅ |
+| Production Deployment | ✅ |
+
+---
+
+# 🎯 Bonus Features
+
+| Feature | Status |
+|----------|--------|
+| Drag & Drop Upload | ✅ |
+| CSV Preview | ✅ |
+| AI Mapping | ✅ |
+| Dynamic Columns | ✅ |
+| Summary Dashboard | ✅ |
+| Search | ✅ |
+| Pagination | ✅ |
+| Mock Mode | ✅ |
+| Dark Theme | ✅ |
+| Loading Indicators | ✅ |
+| Deployment | ✅ |
+
+---
+
+# 🚀 Future Improvements
+
+- User Authentication
+- Database Integration
+- Export Processed CSV
+- Excel (.xlsx) Support
+- Duplicate Record Detection
+- AI Confidence Scores
+- Audit Logs
+- Docker Support
+- Unit Tests
+- Integration Tests
+- CI/CD Pipeline
+- Multi-user Workspace
+
+---
+
+# 📂 Repository
+
+GitHub Repository
+
+https://github.com/Santosh9192/GrowEasy_CSV
+
+---
+
+# 🌍 Live Deployment
+
+## Frontend (Vercel)
+
+https://grow-easy-csv-virid.vercel.app
+
+---
+
+## Backend (Render)
+
+https://groweasy-backend-cr5t.onrender.com
+
+---
+
+## Health Check
+
+https://groweasy-backend-cr5t.onrender.com/api/health
+
+---
+
+# 👨‍💻 Developer
+
+**Santosh Babar**
+
+Software Developer
+
+GitHub
+
+https://github.com/Santosh9192
+
+---
+
+# 🙏 Acknowledgements
+
+Special thanks to:
+
+- GrowEasy
+- Google Gemini AI
+- Next.js
+- React
+- Express.js
+- Vercel
+- Render
+
+for providing the technologies that made this project possible.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+It was developed as part of the **GrowEasy Software Developer Assignment**.
+
+---
+
+# ⭐ If You Like This Project
+
+If you found this project useful or interesting,
+
+please consider giving it a ⭐ on GitHub.
+
+---
 
 <div align="center">
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Frontend Framework** | ![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=next.js) | React framework with App Router |
-| **UI Library** | ![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react) | Component-based UI |
-| **Language** | ![TypeScript](https://img.shields.io/badge/TypeScript_5-3178C6?style=flat-square&logo=typescript) | Type-safe development |
-| **Styling** | ![Tailwind](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=flat-square&logo=tailwindcss) | Utility-first CSS |
-| **Backend** | ![Express](https://img.shields.io/badge/Express_4-000000?style=flat-square&logo=express) | Node.js HTTP server |
-| **AI** | ![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlebard) | Google Generative AI |
-| **CSV Parsing** | ![PapaParse](https://img.shields.io/badge/PapaParse-00B4D8?style=flat-square) | Client-side CSV → JSON |
-| **HTTP Client** | ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=axios) | API communication |
+# 🚀 GrowEasy AI-Powered CSV Importer
 
-</div>
+### Built with ❤️ by **Santosh Babar**
 
----
+**Frontend**
 
-## ✅ Assignment Checklist
+https://grow-easy-csv-virid.vercel.app
 
-This project was built for the **GrowEasy Software Developer Assignment**. Here's how it measures up:
+**Backend**
 
-| Requirement | Status | Notes |
-|-------------|--------|-------|
-| **Step 1 — Upload CSV** | ✅ | Drag & drop + file picker, any CSV format |
-| **Step 2 — Preview** | ✅ | Sticky headers, horizontal/vertical scroll, responsive |
-| **Step 3 — Confirm Import** | ✅ | Confirmation before backend call |
-| **Step 4 — Display Parsed Result** | ✅ | Summary cards + table with search & pagination |
-| **Backend API — Accept any CSV** | ✅ | No fixed column assumptions |
-| **AI Extraction** | ✅ | Google Gemini with batch processing |
-| **All 15 CRM Fields** | ✅ | Every field extracted with dash fallback |
-| **CRM Status Values** | ✅ | Only valid statuses accepted |
-| **Data Source Values** | ✅ | Only valid sources accepted |
-| **Date Format** | ✅ | ISO 8601, JS `new Date()` compatible |
-| **CRM Notes** | ✅ | Extra data captured in crm_note |
-| **Multiple Emails/Mobiles** | ✅ | First used, rest in crm_note |
-| **Skip Invalid Records** | ✅ | No email + no mobile → skipped |
-| **TypeScript** | ✅ | Full type safety frontend + backend |
-| **Dark Mode** | ✅ | System-aware + manual toggle |
-| **Error Handling** | ✅ | Graceful errors with retry options |
-| **Rate Limiting** | ✅ | Configurable, protects /api/import |
-| **CORS Configuration** | ✅ | Configurable for production |
-| **Mock Mode** | ✅ | Works without API key |
-| **Progress Indicator** | ✅ | Loading overlay during AI processing |
-| **Retry Mechanism** | ✅ | Exponential backoff for failed batches |
+https://groweasy-backend-cr5t.onrender.com
 
-### Bonus Features
+**GitHub Repository**
 
-| Bonus | Status | Implementation |
-|-------|--------|---------------|
-| Drag & Drop upload | ✅ | Built into UploadModal |
-| Progress indicators | ✅ | ImportProgress overlay during processing |
-| Retry mechanism | ✅ | 3 retries with exponential backoff |
-| Dark mode | ✅ | System-aware + localStorage toggle |
-| Deployment config | ✅ | CORS, trust proxy, rate limiting |
-| Docker setup | 🚧 | Coming soon |
-| Unit tests | 🚧 | Coming soon |
-| Virtualized tables | 🚧 | Load-more pagination implemented |
+https://github.com/Santosh9192/GrowEasy_CSV
 
 ---
 
-## 📄 License
+### Thank you for reviewing my submission.
 
-This project is submitted as part of the **GrowEasy Software Developer Assignment**.
-
----
-
-<div align="center">
-  <p style="font-size: 0.9rem; color: #888;">
-    Built with ❤️ for GrowEasy &nbsp;·&nbsp; 
-    <a href="https://groweasy.ai">groweasy.ai</a> &nbsp;·&nbsp; 
-    Assignment Deadline: July 12, 2026
-  </p>
-  <p style="font-size: 0.8rem; color: #aaa;">
-    Submission: <a href="mailto:varun@groweasy.ai">varun@groweasy.ai</a> &nbsp;·&nbsp; 
-    Position: Software Developer (Intern / Full-Time)
-  </p>
 </div>
