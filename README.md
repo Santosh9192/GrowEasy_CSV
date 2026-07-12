@@ -184,7 +184,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/groweasy-csv-importer.git
+git clone https://github.com/Santosh9192/GrowEasy_CSV
 cd groweasy-csv-importer
 
 # Install backend dependencies
