@@ -1047,31 +1047,25 @@ You can add screenshots here before submission.
 
 ## 🏠 Home Page
 
-> Add Screenshot
+![Home Page](screenshots/1.home_page.png)
 
 ---
 
 ## 📂 CSV Upload
 
-> Add Screenshot
-
----
-
-## 👀 CSV Preview
-
-> Add Screenshot
+![Import CSV](screenshots/2.import_csv.png)
 
 ---
 
 ## 🤖 AI Processing
 
-> Add Screenshot
+![Processing Page](screenshots/3.Processing_page.png)
 
 ---
 
 ## 📊 Dashboard
 
-> Add Screenshot
+![Extracted Fields](screenshots/4.Extracted_feilds.png)
 
 ---
 
